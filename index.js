@@ -12,7 +12,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
-const URL = process.env.MONGOURL + "/crud-app-backend";
+const URL = process.env.MONGOURL + "/user-crud";
 
 mongoose.connect(URL)
     .then(() => {
