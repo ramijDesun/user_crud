@@ -25,3 +25,7 @@ mongoose.connect(URL)
     .catch((err) => console.log(err))
 
 app.use("/api", route);
+
+app.use("/", (req, res) => {
+    res.status(200).send("Welcome to the server! Everything is running smoothly.");
+})
