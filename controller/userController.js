@@ -22,7 +22,7 @@ export const create = async (req, res) => {
 
 export const getAll = async (req, res) => {
     try {
-        const userData = await User.find();
+        const userData = await User.find().sort({ createdAt: -1 });
 
         if (!userData) {
             return res.status(404).json({
